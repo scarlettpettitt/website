@@ -1,91 +1,100 @@
-
-
 <html>
 <head>
   <style>
-    body {
+     body{
+         text-align: center;
+         background-image: linear-gradient(rgb(229, 103, 23), rgb(222, 222, 222));
+         min-width: 100%;
+         min-height: 100%;
+         padding-bottom: 30px; /* Ensure content doesn't overlap footer */
+      }
+
+    /* Style for the Back to Top button */
+    #backToTop {
+        position: fixed;
+        bottom: 15px; /* Slightly closer to the bottom */
+        right: 15px; /* Slightly closer to the right */
+        background-color: orange; /* Change the background color to orange */
+        color: white;
+        border: none;
+        padding: 6px 12px; /* Make the button even smaller */
+        font-size: 12px; /* Reduce the font size further */
+        cursor: pointer;
+        border-radius: 5px;
+        display: none; /* Initially hidden */
+    }
+
+    #backToTop:hover {
+        background-color: darkorange; /* Darker shade of orange when hovered */
+    }
+
+    /* Style for the footer */
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+        color: white;
+        padding: 10px;
         text-align: center;
-        background-image: linear-gradient(rgb(229, 103, 23), rgb(222, 222, 222));
-        min-width: 100%;
-        min-height: 100%;
-    
-    
+        font-size: 14px;
+        font-style: italic;
     }
 
   </style>
 </head>
 
 <body>
-  
 
 <h1>My Website</h1>
 <img src="https://www.thepaddockmagazine.com/wp-content/uploads/2023/04/00001-1.jpeg" width="500"><br>
-<h2>MY website is about Formula One</h2>
-<h2>What is Formula One?</h2>
-<h3>
-Formula One is a motorsport in which different teams compete in multiple Grand Prix races.<br> 
-Each team engineers its own Formula One car which drivers race around a track.<br> 
-Races take place in different countries around the world,<br> with the most famous including Monaco, Britain, and Japan.<br>
+<h2>MY website is about formula one</h2>
+
+<h2>what is formula one?</h2>
+
+<!-- Add id to the paragraph to act as an anchor target -->
+<h3 id="formulaOne">
+    Formula One is a motorsport in which different teams compete in multiple Grand Prix races.<br> 
+    Each team engineers its own Formula One car which drivers race around a track.<br> 
+    Races take place in different countries around the world,<br> 
+    with the most famous including Monaco, Britain and Japan.<br>
 </h3>
 
-<h2>How many teams and drivers are there in Formula 1?</h2> 
+<!-- Your content continues here... -->
+
+<h2>How many teams and drivers are there in formula 1?</h2>
 <h3>
-A total of 20 drivers and 10 teams make up the current Formula 1 grid,<br> 
-with each outfit fielding two cars.<br> This season, driver experience ranges from multiple world champions like Lewis Hamilton,<br> Max Verstappen, and Fernando Alonso,<br> 
-to racers in their second seasons such as Oscar Piastri and Logan Sargeant (who left and went to NASCAR).<br>
+    A total of 20 drivers and 10 teams makes up the current Formula 1 grid,<br> with each outfit fielding two cars.<br> 
+    This season, driver experience ranges from multiple world champions Lewis Hamilton,<br> Max Verstappen and Fernando Alonso,<br> 
+    to racers in their second seasons such as Oscar Piastri and Logan Sargeant, but Logan left and went to NASCAR.<br>
 </h3>
 
-<h2>Here are some educational videos about Formula 1</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cigfYtA6CIc?si=Rv3bC3ZYwibC7yzH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/xTZr2IoXvXk?si=YHGE85rKeG9aBIu0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</h2>
+<!-- Add the Back to Top button -->
+<button id="backToTop" onclick="scrollToTop()">Back to Top</button>
 
-<h2>
-<a href="https://www.formula1.com/" target="_blank">
-  <button>Click Me!</button>
-</a>
-</h2>
+<!-- Footer -->
+<footer>
+    Made by Scarlett Pettitt
+</footer>
 
-<h2>What are the teams and who are the drivers for the teams?</h2>
-<h3>
-Ferrari, in Ferrari we have Carlos Sainz and Charles Leclerc (numbers 55 and 16).<br>
-McLaren, in McLaren we have Lando Norris (my favorite) and Oscar Piastri (numbers 4 and 81).<br>
-Red Bull, in Red Bull we have 4-time championship winner Max Verstappen and Sergio Perez (numbers 1 and 11).<br>
-Alpine, in Alpine we have Esteban Ocon and Pierre Gasly (numbers 31 and 10).<br>
-Mercedes, in Mercedes we have Lewis Hamilton and George Russell (numbers 44 and 63).<br>
-Haas, in Haas we have Nico Hulkenberg and Kevin Magnussen (numbers 20 and 27).<br>
-Aston Martin, in Aston Martin we have Fernando Alonso and Lance Stroll (numbers 14 and 18).<br>
-RB, in RB we have Yuki Tsunoda and Liam Lawson (numbers 22 and 30).<br>
-Kick Sauber, in Kick Sauber we have Valtteri Bottas and Zhou Guanyu (numbers 77 and 24).<br>
-Williams, in Williams we have Alex Albon and Franco Colapinto (numbers 23 and 43).<br>
-</h3>
+<script>
+    // Show the Back to Top button when the user scrolls down 100px
+    window.onscroll = function() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("backToTop").style.display = "block";
+        } else {
+            document.getElementById("backToTop").style.display = "none";
+        }
+    };
 
-<h2>What is the biggest achievement in F1?</h2>
-<h3>
-Most Drivers' World Championships.<br>
-Lewis Hamilton remains atop the record table alongside Michael Schumacher with seven titles apiece. The German was dominant at the turn of the century, winning five titles on the bounce with Ferrari. These were in addition to his double world championships with Benetton in the '90s.
-</h3>
-
-<h2>What are points in F1?</h2>
-<h3>
-Points are awarded to drivers and teams based on where they finish in a race. The winner receives 25 points, the second-place finisher 18 points, with 15, 12, 10, 8, 6, 4, 2, and 1 points for positions 3 through 10, respectively.
-</h3>
-
-<h2>Why do they play a national anthem for pole position winners?</h2>
-<h3>
-The question has caught the attention of F1 fans. In every F1 Grand Prix podium celebration, two national anthems are played: one for the winning driver, and the other for their team. The anthem depends on the nationality of the driver and the original country to which the team belongs.
-</h3>
-
-<h2>Why is an F1 car different than any other sports car?</h2>
-<h3>
-Aerodynamics. This is one of the most important factors distinguishing them from other cars. The shape of the F1 car is designed in such a way that air resistance at high speed is minimal, and the car is pressed as hard as possible to the track's surface.
-</h3>
-
-<h2>What do the different tyres mean in F1?</h2>
-<h3>
-Every race has soft, medium, and hard tyre compounds, and each has its benefits and trade-offs. The soft tyre provides the most grip but isn't durable; the hard tyre will last the longest but isn't as grippy; and the medium tyre offers the best of both without excelling at either.
-</h3>
+    // Function to scroll to the top of the page
+    function scrollToTop() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+    }
+</script>
 
 </body>
 </html>
+
+
